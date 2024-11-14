@@ -38,6 +38,7 @@ class React_Admin_Page {
 		$asset_file = include( plugin_dir_path(__FILE__) . 'build/index.asset.php' );
 
 		wp_enqueue_script('react-admin-js', plugin_dir_url(__FILE__) . 'build/index.js', $asset_file['dependencies'], $asset_file['version'], true );
+		wp_enqueue_style('react-tailwind-style', plugin_dir_url(__FILE__) . 'assets/css/tailwind.css', array(), $asset_file['version']);
 
 
 	}
